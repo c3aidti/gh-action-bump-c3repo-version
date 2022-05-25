@@ -207,8 +207,8 @@ const workspace = process.env.GITHUB_WORKSPACE;
 })();
 
 function getPackageJson() {
-  const pathToPackage = path.join(workspace, 'package.json');
-  if (!existsSync(pathToPackage)) throw new Error("package.json could not be found in your project's root.");
+  const pathToPackage = path.join(workspace, 'repository.json');
+  if (!existsSync(pathToPackage)) throw new Error("repository.json could not be found in your project's root.");
   return require(pathToPackage);
 }
 
